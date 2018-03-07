@@ -39,8 +39,9 @@ def simulate_monkeys():
             best_score = trial_score
             best_string = trial
         if counter % 1000 == 0:
-            print(best_score, best_string)
-
+            print("attempt number: %d\nbest score so far: %d\nbest string so far: %s"
+                % (counter, best_score, best_string))
+    print("found a perfect match!")
 
 simulate_monkeys()
 
