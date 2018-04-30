@@ -5,6 +5,8 @@ This repository contains my solutions to the problems that I have worked through
 
 #### Table of Contents
 **[1. infinite_monkey_theorem](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**
+**[2. Fraction Class](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**
+**[1. min_number](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**
 
 #### Infinite Monkey Theorem
 My solution: [*monkey.py*](monkey.py)
@@ -13,4 +15,10 @@ The infinite monkey theorem states that a monkey hitting keys at random on a typ
 
 This is my attempt at repeatedly generating random strings until one matches the target string. 
 
-Problem taken from *Problem Solving with Algorithms and Data Structures Using Python*, Bradley Miller and David Ranum
+#### Fraction Class
+My solution: [*fraction.py*](fraction.py)
+
+My attempt to build a class for a fractional number. 
+
+#### min_number
+
