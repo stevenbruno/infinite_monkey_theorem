@@ -4,9 +4,9 @@
 This repository contains my solutions to the problems that I have worked through in the [online book](https://runestone.academy/runestone/static/pythonds/index.html).
 
 #### Table of Contents
-**[1. infinite_monkey_theorem](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**
-**[2. Fraction Class](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**
-**[1. min_number](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**
+**[1. infinite_monkey_theorem](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**  
+**[2. fraction_class](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**  
+**[3. min_number](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**
 
 #### Infinite Monkey Theorem
 My solution: [*monkey.py*](monkey.py)
