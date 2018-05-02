@@ -5,8 +5,8 @@ This repository contains my solutions to the problems that I have worked through
 
 #### Table of Contents
 **[1. infinite_monkey_theorem](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**  
-**[2. fraction_class](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**  
-**[3. min_number](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**
+**[2. fraction_class](https://github.com/stevenbruno/python_problems/blob/master/README.md#Fraction-Class)**  
+**[3. min_number](https://github.com/stevenbruno/python_problems/blob/master/README.md#min_number)**
 
 #### Infinite Monkey Theorem
 My solution: [*monkey.py*](monkey.py)
@@ -21,4 +21,7 @@ My solution: [*fraction.py*](fraction.py)
 My attempt to build a class for a fractional number. 
 
 #### min_number
+My solution: [*min_number.py*](min_number.py)
+
+This code demonstrates two ways to find the minimum number in a given list. The first function is time complexity O(n)^2. The second is O(n).
 
