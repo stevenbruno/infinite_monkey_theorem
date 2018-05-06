@@ -23,5 +23,5 @@ My attempt to build a class for a fractional number.
 ### min_number
 My solution: [*min_number.py*](min_number.py)
 
-This code demonstrates two ways to find the minimum number in a given list. The first function is time complexity O(n)^2. The second is O(n).
+This code demonstrates two ways to find the minimum number in a given list. The first function is time complexity O(n)^2. The second is O(n). I have integrated matplotlib.pyplot to visualize the function runtimes.
 
