@@ -9,7 +9,7 @@ Resource:  Miller and Ranum Problem Solving with Data Structures and Algorithms
 
 
 import turtle
-
+from random import randrange as rnd
 
 #Recursive spiral
 
@@ -24,24 +24,31 @@ def drawSpiral(myTurtle, lineLen):
 
 def tree(branchLen, t):
 	if branchLen > 5:
+		turn_rad = rnd(15, 45)
+		t.color(rnd(0,255), rnd(0,255), rnd(0,255))
+		if branchLen <= 15:
+			t.color(rnd(0,255), rnd(0,255), rnd(0,255))
+		t.pensize(branchLen*0.2)
 		t.forward(branchLen)
-		t.right(20)
+		t.right(turn_rad)
 		tree(branchLen - 15, t)
-		t.left(40)
+		t.left(turn_rad * 2)
 		tree(branchLen - 15, t)
-		t.right(20)
+		t.right(turn_rad)
+		t.up()
 		t.backward(branchLen)
+		t.down()
 
 
 def main(): 
 	t = turtle.Turtle()
 	myWin = turtle.Screen()
+	myWin.colormode(255)
 	t.left(90)
 	t.up()
 	t.backward(100)
 	t.down()
-	t.color("green")
-	tree(75, t)
+	tree(100, t)
 	myWin.exitonclick()
 
 main()
