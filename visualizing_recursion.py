@@ -24,10 +24,12 @@ def drawSpiral(myTurtle, lineLen):
 
 def tree(branchLen, t):
 	if branchLen > 5:
+		if branchLen < 15:
+			t.begin_fill()
+			t.circle(rnd(0,15))
+			t.end_fill()
 		turn_rad = rnd(15, 45)
 		t.color(rnd(0,255), rnd(0,255), rnd(0,255))
-		if branchLen <= 15:
-			t.color(rnd(0,255), rnd(0,255), rnd(0,255))
 		t.pensize(branchLen*0.2)
 		t.forward(branchLen)
 		t.right(turn_rad)
@@ -44,6 +46,7 @@ def main():
 	t = turtle.Turtle()
 	myWin = turtle.Screen()
 	myWin.colormode(255)
+	t.speed(9)
 	t.left(90)
 	t.up()
 	t.backward(100)
