@@ -7,6 +7,7 @@ This repository contains my solutions to the problems that I have worked through
 **[1. infinite_monkey_theorem](https://github.com/stevenbruno/python_problems/blob/master/README.md#infinite-monkey-theorem)**  
 **[2. fraction_class](https://github.com/stevenbruno/python_problems#fraction-class)**  
 **[3. min_number](https://github.com/stevenbruno/python_problems/blob/master/README.md#min_number)**
+**[4. visualizing_recursion](https://github.com/stevenbruno/python_problems/blob/master/README.md#visualizing_recursion)**
 
 ### Infinite Monkey Theorem
 My solution: [*monkey.py*](monkey.py)
@@ -25,3 +26,7 @@ My solution: [*min_number.py*](min_number.py)
 
 This code demonstrates two ways to find the minimum number in a given list. The first function is time complexity O(n)^2. The second is O(n). I have integrated matplotlib.pyplot to visualize the function runtimes.
 
+### visualizing_recursion
+My solution: [*visualizing_recursion.py*](visualizing_recursion.py)
+
+This code demonstrates a colorful fractal tree generator. The tree is generated using a recursive process.
