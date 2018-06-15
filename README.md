@@ -10,7 +10,8 @@ This repository contains my solutions to the problems that I have worked through
 **[4. visualizing_recursion](https://github.com/stevenbruno/python_problems/blob/master/README.md#visualizing_recursion)**  
 **[5. hashing](https://github.com/stevenbruno/python_problems/blob/master/README.md#hashing)**  
 **[6. searching_and_sorting](https://github.com/stevenbruno/python_problems/blob/master/README.md#searching-and-sorting)**
-
+  
+  
 ### Infinite Monkey Theorem
 My solution: [*monkey.py*](monkey.py)
 
