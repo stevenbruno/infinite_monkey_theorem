@@ -97,5 +97,28 @@ def insertionSort(alist):
 		position -= 1
 
 	alist[position] = current_value
-	
+
+
+# Shell Sort (somewhere between O(n) and O(n2), depends on increment)
+
+def shellSort(alist):
+	sublistcount = len(alist)//2
+	while sublistcount > 0:
+		for startposition in range(sublistcount):
+			gapInsertionSort(alist, startposition, sublistcount,
+							 "The list is", alist)
+			sublistcount = sublistcount // 2
+
+def gapInsertionSort(alist, start, gap):
+	for i in range(start+gap, len(alist), gap):
+		currentvalue = alist[i]
+		position = i
+
+		while position >= gap and alist[position-gap] > currentvalue:
+			alist[position]=alist[position-gap]
+			position = position-gap
+
+		alist[position] = currentvalue
+
+
 
