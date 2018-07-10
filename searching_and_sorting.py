@@ -48,12 +48,6 @@ def recBinarySearch(alist, first, last, item):
 				return recBinarySearch(alist, first, last, item)
 
 
-if __name__ == '__main__':
-	testlist = [0, 1, 2, 8, 14, 18, 36, 101]
-	print(binarySearch(testlist, 12))
-	print(recBinarySearch(testlist, 0, len(testlist)-1, 12))
-
-
 # Short Bubble Sort (called short because potential to finish early)
 
 def shortBubbleSort(alist):
@@ -120,5 +114,40 @@ def gapInsertionSort(alist, start, gap):
 
 		alist[position] = currentvalue
 
+
+# Merge Sort O(nlogn)
+
+def mergeSort(alist):
+	print("splitting ",alist)
+	if len(alist)>1:
+		mid = len(alist)//2
+		lefthalf = alist[:mid]
+		righthalf = alist[mid:]
+
+		mergeSort(lefthalf)
+		mergeSort(righthalf)
+
+		i = 0
+		j = 0
+		k = 0
+		while i < len(lefthalf) and j < len(righthalf):
+			if lefthalf[i] < righthalf[j]:
+				alist[k] = lefthalf[i]
+				i +=1
+			else:
+				alist[k] = righthalf[j]
+				j +=1 
+			k +=1
+
+		while i < len(lefthalf):
+			alist[k] = lefthalf[i]
+			i +=1
+			k +=1
+
+		while j < len(righthalf):
+			alist[k] = righthalf[j]
+			j +=1
+			k +=1
+	print("merging ",alist)
 
 
