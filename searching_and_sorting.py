@@ -51,7 +51,7 @@ def recBinarySearch(alist, first, last, item):
 # Short Bubble Sort (called short because potential to finish early)
 
 def shortBubbleSort(alist):
-	exchanges - True
+	exchanges = True
 	passnum = len(alist)-1
 	while passnum > 0 and exchanges:
 		exchanges = False
@@ -95,13 +95,15 @@ def insertionSort(alist):
 
 # Shell Sort (somewhere between O(n) and O(n2), depends on increment)
 
-def shellSort(alist):
+def shellSort(alist): 
 	sublistcount = len(alist)//2
 	while sublistcount > 0:
 		for startposition in range(sublistcount):
-			gapInsertionSort(alist, startposition, sublistcount,
-							 "The list is", alist)
-			sublistcount = sublistcount // 2
+			gapInsertionSort(alist, startposition, sublistcount)
+
+		print("After increments of size", sublistcount, ", the list is ", alist)
+
+		sublistcount = sublistcount // 2
 
 def gapInsertionSort(alist, start, gap):
 	for i in range(start+gap, len(alist), gap):
@@ -112,8 +114,8 @@ def gapInsertionSort(alist, start, gap):
 			alist[position]=alist[position-gap]
 			position = position-gap
 
-		alist[position] = currentvalue
 
+		alist[position] = currentvalue
 
 # Merge Sort O(nlogn)
 
@@ -121,7 +123,7 @@ def mergeSort(alist):
 	print("splitting ",alist)
 	if len(alist)>1:
 		mid = len(alist)//2
-		lefthalf = alist[:mid]
+		lefthalf = alist[:mid] #replace with list comp?
 		righthalf = alist[mid:]
 
 		mergeSort(lefthalf)
@@ -151,3 +153,5 @@ def mergeSort(alist):
 	print("merging ",alist)
 
 
+example_list = [4, 0, 7, 3, 2, 1, 9, 5, 6, 8]
+shellSort(example_list)
