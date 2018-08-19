@@ -1,4 +1,4 @@
-# This code demonstrates various tree and tree algorithm implementations. 
+# This code demonstrates various tree and tree algorithm implementations.
 # Credit to Miller and Ranum, Problem Solving with Algorithms and Data Structures Using Python
 
 
@@ -61,7 +61,7 @@ def buildParseTree(fpexp):
             currentTree.setRootVal(i) 
             currentTree.insertRight('')
             pStack.push(currentTree)
-            currentTree = currentTree.getRightChild
+            currentTree = currentTree.getRightChild()
         
         elif i == ')':
             currentTree = pStack.pop()
@@ -71,7 +71,11 @@ def buildParseTree(fpexp):
                 currentTree.setRootVal(int(i))
                 parent = pStack.pop()
                 currentTree = parent
+
             except ValueError:
                 raise ValueError('token {} is not a valid integer'.format(i))
         
     return eTree
+
+pt = buildParseTree("( ( 10 + 5 ) * 3 )")
+pt.postorder()
