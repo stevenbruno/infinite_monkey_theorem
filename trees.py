@@ -2,9 +2,14 @@
 # Credit to Miller and Ranum, Problem Solving with Algorithms and Data Structures Using Python
 
 
+
+from pythonds.basic.stack import Stack 
+from pythonds.trees.binaryTree import BinaryTree
+import operator
+
 # Binary Tree
 
-class BinaryTree:
+""" class BinaryTree:
     def __init__(self,rootObj):
         self.key = rootObj
         self.leftChild = None
@@ -38,11 +43,8 @@ class BinaryTree:
     def getRootVal(self):
         return self.key
 
-
+ """
 # Parse Tree
-
-from pythonds.basic.stack import Stack 
-from pythonds.trees.binaryTree import BinaryTree
 
 def buildParseTree(fpexp):
     fplist = fpexp.split()
@@ -77,5 +79,21 @@ def buildParseTree(fpexp):
         
     return eTree
 
+
+def evaluate(parseTree):
+    opers = {'+':operator.add, '-':operator.sub, '*':operator.mul, '/':operator.truediv}
+
+    leftC = parseTree.getLeftChild()
+    rightC = parseTree.getRightChild()
+
+    if leftC and rightC:
+        fn = opers[parseTree.getRootVal()]
+        return fn(evaluate(leftC), evaluate(rightC))
+    
+    else:
+        return parseTree.getRootVal()
+
+
 pt = buildParseTree("( ( 10 + 5 ) * 3 )")
-pt.postorder()
+
+print(evaluate(pt))
