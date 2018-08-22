@@ -94,6 +94,44 @@ def evaluate(parseTree):
         return parseTree.getRootVal()
 
 
-pt = buildParseTree("( ( 10 + 5 ) * 3 )")
+def preorder(tree): #tree traversal method that prioritizes looking for left children
+    if tree:
+        print(tree.getRootVal())
+        preorder(tree.getLeftChild())
+        preorder(tree.getRightChild())
 
-print(evaluate(pt))
+
+def postorder(tree):
+    if tree != None:
+        postorder(tree.getLeftChild())
+        postorder(tree.getRightChild())
+        print(tree.getRootVal())
+
+
+def postordereval(tree):
+    opers = {'+':operator.add, '-':operator.sub, '*':operator.mul, '/':operator.truediv}
+    res1 = None
+    res2 = None
+    if tree:
+        res1 = postordereval(tree.getLeftChild())
+        res2 = postordereval(tree.getRightChild())
+        if res1 and res2:
+            return opers[tree.getRootVal()](res1,res2)
+        else:
+            return tree.getRootVal()
+
+
+def inorder(tree): #visits left subtree followed by root followed by right subtree
+  if tree != None:
+      inorder(tree.getLeftChild())
+      print(tree.getRootVal())
+      inorder(tree.getRightChild())
+
+
+def printexp(tree):
+    sVal = ""
+    if tree:
+        sVal = '(' + printexp(tree.getLeftChild())
+        sVal +=  str(tree.getRootVal())
+        sVal += printexp(tree.getRightChild()) + ')'
+    return sVal
