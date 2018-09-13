@@ -154,7 +154,7 @@ class BinHeap:
 
     def insert(self, k):
         self.heapList.append(k)
-        self.currentSize = self.currentSize + 1
+        self.currentSize += 1
         self.percUp(self.currentSize)
 
     def percDown(self, i):
@@ -182,3 +182,19 @@ class BinHeap:
         self.percDown(1)
         return retval
 
+    def buildHeap(self,alist):
+      i = len(alist) // 2
+      self.currentSize = len(alist)
+      self.heapList = [0] + alist[:]
+      while (i > 0):
+          self.percDown(i)
+          i = i - 1
+
+bh = BinHeap()
+bh.buildHeap([9,5,6,2,3])
+
+print(bh.delMin())
+print(bh.delMin())
+print(bh.delMin())
+print(bh.delMin())
+print(bh.delMin())
